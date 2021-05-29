@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  margin-bottom: 100px;
+}
+
+h1 {
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #252525;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.x-header {
+  background: #252525;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+}
+
+.x-header a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.x-menu {
+  display: flex;
+}
+
+.x-menu li {
+  margin-left: 10px;
+}
+
+.x-menu li a {
+  display: block;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .x-header a {
+    font-size: 0.9rem;
+  }
+
+  .x-menu li {
+    margin-left: 5px;
+  }
+
+  .x-menu li a {
+    display: block;
+    padding: 5px;
+  }
+}
+
+.x-flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.x-flexbox div {
+  flex: 270px;
+  margin: 10px;
+}
+
+.x-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.x-grid-main {
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+
+.x-grid-second {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .x-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .x-grid-main {
+    grid-column: auto;
+    grid-row: auto;
+    order: -1;
+  }
+}
+
+.x-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  max-width: 1000px;
+  padding: 10px;
+  margin: 0 auto;
+  grid-gap: 30px;
+}
+
+.x-grid-2 .main img {
+  width: 100%;
+}
+
+.x-grid-2 .sidebar div {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .x-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .x-grid-2 .sidebar {
+    display: flex;
+    overflow: scroll;
+  }
+  .x-grid-2 .sidebar div {
+    flex: 1 0 200px;
+    margin: 0 10px;
+  }
+}
+
+.x-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 10px;
+}
+
+.x-grid-3 .main {
+  grid-row: 1 / 3;
+}
+
+.x-grid-3 > div {
+  display: grid;
+}
+
+.x-grid-3 img {
+  grid-column: 1;
+  grid-row: 1/3;
+  align-self: end;
+}
+
+.x-grid-3 p {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  color: white;
+  grid-column: 1;
+  grid-row: 2;
+  align-self: end;
+}
